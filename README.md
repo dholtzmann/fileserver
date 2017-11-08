@@ -8,8 +8,8 @@ The original http.FileServer() will show directory listings, this one does not.
 ## Example
 
 ```go
-	func main() {
-		fs := simplefileserver.OnlyFilesFilesystem{http.Dir("/tmp/")}
-		http.ListenAndServe(":8080", http.FileServer(fs))
-	}
+func main() {
+	fs := simplefileserver.OnlyFilesFilesystem{http.Dir("/tmp/")}
+	http.ListenAndServe(":8080", http.FileServer(fs))
+}
 ```
